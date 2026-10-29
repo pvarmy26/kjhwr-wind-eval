@@ -1,26 +1,15 @@
-# UK Day-Ahead Wind Forecast Evaluation Portal
+# UK Wind Generation Forecast Evaluator
 
-A customized full-stack analytical web portal designed for UK energy utility trading teams. The portal enables traders to evaluate national renewable (wind) generation forecasts against Elexon actuals for Day-Ahead electricity purchasing decisions in January 2026.
+A customized web application developed for UK energy utilities to evaluate day-ahead wind power generation forecasts against actual outturn data from Elexon BMRS for January 2026.
 
----
+## Live Application
+- **Frontend App (Vercel):** https://kjhwr-wind-eval.vercel.app
+- **Backend API Docs (Render):** https://kjhwr-wind-eval.onrender.com/docs
 
-## 🚀 Live Deployment
-- **Frontend Web App (Vercel):** [https://your-app.vercel.app](https://your-app.vercel.app) *(Replace with your live Vercel URL)*
-- **Backend API Docs (Render/Heroku):** [https://your-backend.onrender.com/docs](https://your-backend.onrender.com/docs) *(Replace with your live Backend URL)*
-
----
-
-## 🤖 Explicit Declaration of AI Tools Used
-In accordance with Section 2 of the assessment guidelines, **AI tool (Gemini)** is explicitly used to assist in building this application. Specifically:
-- **Boilerplate & Configuration Generation:** Scaffolding initial FastAPI routes, React Vite structure, and Docker multi-stage builds.
-- **Data Engineering Assistance:** Refining Pandas datetime parsing and timezone alignment (`UTC`) for Elexon BMRS API streams.
-- **Frontend Visualization Layout:** Styling KPI metric cards and configuring Recharts time-series line chart components.
-
----
+## AI Tools Disclosure
+- **Gemini / AI Coding Assistant:** Used for rapid full-stack scaffolding, Elexon BMRS endpoint integration, UI/CSS dark mode styling, and metrics calculation verification.
 
 ## 📁 Repository & Directory Structure
-
-```text
 uk-wind-eval-app/
 ├── backend/
 │   ├── app/
@@ -39,3 +28,18 @@ uk-wind-eval-app/
 │   └── .dockerignore
 ├── docker-compose.yml       # Multi-container orchestration (Backend + Frontend)
 └── README.md                # Project documentation
+
+## Local Setup
+
+```bash
+# Clone the repository
+git clone [https://github.com/pvarmy26/kjhwr-wind-eval.git](https://github.com/pvarmy26/kjhwr-wind-eval.git)
+cd kjhwr-wind-eval
+
+# Start services via Docker
+docker-compose up --build
+
+---
+
+
+
