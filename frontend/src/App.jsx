@@ -10,7 +10,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 import './App.css';
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 function App() {
   const [selectedDate, setSelectedDate] = useState('2026-01-15');
   const [data, setData] = useState(null);
@@ -21,7 +21,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`http://localhost:8000/api/wind-analysis?date=${dateStr}`);
+      const response = await fetch(`${API_BASE_URL}/api/wind-analysis?date=${dateStr}`);
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
