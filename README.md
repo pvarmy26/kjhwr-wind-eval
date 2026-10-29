@@ -39,7 +39,6 @@ cd kjhwr-wind-eval
 # Start services via Docker
 docker-compose up --build
 
----
 
 
 
