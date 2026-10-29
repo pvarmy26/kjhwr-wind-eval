@@ -48,6 +48,8 @@ function App() {
             type="date"
             id="date"
             value={selectedDate}
+            min="2026-01-01"
+            max="2026-01-31"
             onChange={(e) => setSelectedDate(e.target.value)}
           />
         </div>
